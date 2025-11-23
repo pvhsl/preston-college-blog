@@ -1,4 +1,4 @@
- /* --- 1. General Typography --- */
+ /* --- 1. General Reset & Typography --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
@@ -11,14 +11,14 @@
         a { text-decoration: none; color: #0066cc; }
         a:hover { text-decoration: underline; }
 
-        /* --- 2. Main Container --- */
+        /* --- 2. Main Container (Centered on Page) --- */
         .container {
             max-width: 1000px; /* Width of the whole content area */
             margin: 0 auto;    /* This centers the container on the screen */
             padding: 50px 20px;
         }
 
-        /* --- 3. Header --- */
+        /* --- 3. Header (CENTERED TEXT) --- */
         header {
             text-align: center; /* <--- This centers the Blog Title */
             margin-bottom: 60px;
@@ -44,14 +44,15 @@
 
         /* --- LEFT COLUMN: The Article --- */
         .main-article {
-            flex: 3; 
+            flex: 3; /* Takes up 75% of width */
         }
 
         .post-layout {
-            display: flex; 
+            display: flex; /* Splits Date and Content */
             gap: 20px;
         }
 
+        /* The Date on the Left */
         .post-date {
             width: 80px;
             font-family: monospace;
@@ -83,8 +84,10 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
         }
+
+        /* --- RIGHT COLUMN: The Sidebar --- */
         aside {
-            flex: 1;
+            flex: 1; /* Takes up 25% of width */
             min-width: 250px;
         }
 
@@ -117,11 +120,19 @@
             border-radius: 4px;
             width: 100%;
         }
+        header h1 a {
+        text-decoration: none; 
+        color: #333;           
+        transition: color 0.3s ease; 
+}
+
+        header h1 a:hover {
+        color: #0066cc; 
+}
 
         /* --- Mobile View --- */
         @media (max-width: 768px) {
             .content-wrapper { flex-direction: column; }
             .post-layout { flex-direction: column; }
             .post-date { text-align: left; width: 100%; margin-bottom: 5px; }
-
         }
