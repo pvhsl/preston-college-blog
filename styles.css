@@ -1,4 +1,4 @@
- /* --- 1. General Reset & Typography --- */
+ /* --- 1. General Typography --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
@@ -11,14 +11,14 @@
         a { text-decoration: none; color: #0066cc; }
         a:hover { text-decoration: underline; }
 
-        /* --- 2. Main Container (Centered on Page) --- */
+        /* --- 2. Main Container --- */
         .container {
             max-width: 1000px; /* Width of the whole content area */
             margin: 0 auto;    /* This centers the container on the screen */
             padding: 50px 20px;
         }
 
-        /* --- 3. Header (CENTERED TEXT) --- */
+        /* --- 3. Header --- */
         header {
             text-align: center; /* <--- This centers the Blog Title */
             margin-bottom: 60px;
@@ -44,15 +44,14 @@
 
         /* --- LEFT COLUMN: The Article --- */
         .main-article {
-            flex: 3; /* Takes up 75% of width */
+            flex: 3; 
         }
 
         .post-layout {
-            display: flex; /* Splits Date and Content */
+            display: flex; 
             gap: 20px;
         }
 
-        /* The Date on the Left */
         .post-date {
             width: 80px;
             font-family: monospace;
@@ -84,10 +83,8 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
         }
-
-        /* --- RIGHT COLUMN: The Sidebar --- */
         aside {
-            flex: 1; /* Takes up 25% of width */
+            flex: 1;
             min-width: 250px;
         }
 
@@ -126,4 +123,5 @@
             .content-wrapper { flex-direction: column; }
             .post-layout { flex-direction: column; }
             .post-date { text-align: left; width: 100%; margin-bottom: 5px; }
+
         }
