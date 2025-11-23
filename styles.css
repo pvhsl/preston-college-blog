@@ -1,0 +1,129 @@
+ /* --- 1. General Reset & Typography --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: #0066cc; }
+        a:hover { text-decoration: underline; }
+
+        /* --- 2. Main Container (Centered on Page) --- */
+        .container {
+            max-width: 1000px; /* Width of the whole content area */
+            margin: 0 auto;    /* This centers the container on the screen */
+            padding: 50px 20px;
+        }
+
+        /* --- 3. Header (CENTERED TEXT) --- */
+        header {
+            text-align: center; /* <--- This centers the Blog Title */
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* --- 4. Two-Column Layout --- */
+        .content-wrapper {
+            display: flex;
+            gap: 50px;
+        }
+
+        /* --- LEFT COLUMN: The Article --- */
+        .main-article {
+            flex: 3; /* Takes up 75% of width */
+        }
+
+        .post-layout {
+            display: flex; /* Splits Date and Content */
+            gap: 20px;
+        }
+
+        /* The Date on the Left */
+        .post-date {
+            width: 80px;
+            font-family: monospace;
+            color: #555;
+            font-size: 14px;
+            text-align: right; /* Date aligns to the right, towards the text */
+            padding-top: 5px;
+            flex-shrink: 0; 
+        }
+
+        .post-content {
+            width: 100%;
+        }
+
+        .post-title {
+            font-size: 26px;
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .post-body p { margin-bottom: 20px; font-size: 15px; }
+
+        .post-body h3 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* --- RIGHT COLUMN: The Sidebar --- */
+        aside {
+            flex: 1; /* Takes up 25% of width */
+            min-width: 250px;
+        }
+
+        .profile-card {
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            float: left;
+            margin-right: 15px;
+            background-color: #ddd;
+        }
+
+        .profile-info {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .social-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #000;
+            background: #eee;
+            text-align: center;
+            padding: 5px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        /* --- Mobile View --- */
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .post-layout { flex-direction: column; }
+            .post-date { text-align: left; width: 100%; margin-bottom: 5px; }
+        }
