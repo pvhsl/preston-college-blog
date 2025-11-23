@@ -122,8 +122,6 @@
         }
         header h1 a {
         text-decoration: none; 
-        color: #333;           
-        transition: color 0.3s ease; 
 }
 
         header h1 a:hover {
@@ -135,4 +133,5 @@
             .content-wrapper { flex-direction: column; }
             .post-layout { flex-direction: column; }
             .post-date { text-align: left; width: 100%; margin-bottom: 5px; }
+
         }
