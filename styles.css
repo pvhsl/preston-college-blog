@@ -120,13 +120,6 @@
             border-radius: 4px;
             width: 100%;
         }
-        header h1 a {
-        text-decoration: none; 
-}
-
-        header h1 a:hover {
-        color: #0066cc; 
-}
 
         /* --- Mobile View --- */
         @media (max-width: 768px) {
@@ -135,3 +128,4 @@
             .post-date { text-align: left; width: 100%; margin-bottom: 5px; }
 
         }
+
